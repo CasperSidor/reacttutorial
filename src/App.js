@@ -14,6 +14,7 @@ function App() {
       <Greet name="Casper" nickname="Sidor"/>
       <Greet name="Christer" nickname="Basse"/>
     </div>
+    
   );
 }
 
