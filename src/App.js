@@ -14,7 +14,9 @@ function App() {
         Kategorier:
         <p/ >
         Tegneserier <input type="checkbox" name="CartoonCheckbox"/>
+        <p/ >
         Litteratur <input type="checkbox" name="LitteratureCheckbox"/>
+        <p/ >
         Roman <input type="checkbox" name="NovelCheckbox"/>
       </label>
       <hr />
