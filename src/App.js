@@ -8,7 +8,7 @@ import Message from './components/Message'
 function App() {
   return (
     <div className="App">
-      Søgefeldt <input />
+      Søgefelt <input />
       <hr />
       <label>
         Kategorier:
