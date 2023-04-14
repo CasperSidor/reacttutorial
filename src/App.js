@@ -1,45 +1,23 @@
-import React, {Component} from 'react'
-import './App.css';
-import Greet from './components/Greet'
-import Welcome from './components/Welcome'
-import Hello from './components/Hello'
-import Message from './components/Message'
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Navbar } from "./components/navbar";
+import { Shop } from "./pages/shop/shop";
+import { Contact } from "./pages/contact";
+import { Cart } from "./pages/cart/cart";
 
 function App() {
   return (
     <div className="App">
-      Søgefelt <input />
-      <hr />
-      <label>
-        Kategorier:
-        <p/ >
-        Tegneserier <input type="checkbox" name="CartoonCheckbox"/>
-        <p/ >
-        Litteratur <input type="checkbox" name="LitteratureCheckbox"/>
-        <p/ >
-        Roman <input type="checkbox" name="NovelCheckbox"/>
-      </label>
-      <hr />
-
-      Sorter efter:
-        <p/ >
-        <label>
-          <input type="radio" name="myRadio" value="Price" />
-          Pris
-        </label>
-        <label>
-          <input type="radio" name="myRadio" value="Year" />
-          Årstal
-        </label>
-
-      {/* <Greet></Greet>
-      <Welcome></Welcome> 
-      <Hello></Hello>*/
-      /* <Greet name="Cathrine" nickname="Cat"/>
-      <Greet name="Casper" nickname="Sidor"/>
-      <Greet name="Christer" nickname="Basse"/> */}
+      <ShopContextProvider>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Shop />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </Router>
+      </ShopContextProvider>
     </div>
-    
   );
 }
 
